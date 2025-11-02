@@ -6,7 +6,6 @@ colorRadios.forEach((radio) => {
   });
 });
 
-// Щоб колір одразу відповідав початково обраному
 document.body.style.backgroundColor = document.querySelector(
   'input[name="color"]:checked'
 ).value;
@@ -17,7 +16,6 @@ document.body.style.backgroundColor = document.querySelector(
 
 
 
-// --- частина 1: Привітання ---
 const nameInput = document.querySelector('#name-input');
 const nameOutput = document.querySelector('#name-output');
 
@@ -26,7 +24,6 @@ nameInput.addEventListener('input', () => {
   nameOutput.textContent = value === '' ? 'незнайомець' : value;
 });
 
-// --- частина 2: Перевірка кількості символів ---
 const validationInput = document.querySelector('#validation-input');
 
 validationInput.addEventListener('blur', () => {
@@ -54,7 +51,7 @@ validationInput.addEventListener('blur', () => {
 const fontSizeControl = document.getElementById("font-size-control");
 const text = document.getElementById("text");
 
-// Початкове значення
+
 text.style.fontSize = fontSizeControl.value + "px";
 
 fontSizeControl.addEventListener("input", () => {
