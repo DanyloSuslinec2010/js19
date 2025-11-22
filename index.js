@@ -10,46 +10,31 @@ document.body.style.backgroundColor = document.querySelector(
   'input[name="color"]:checked'
 ).value;
 
+const nameInput = document.querySelector("#name-input");
+const nameOutput = document.querySelector("#name-output");
 
-
-
-
-
-
-const nameInput = document.querySelector('#name-input');
-const nameOutput = document.querySelector('#name-output');
-
-nameInput.addEventListener('input', () => {
+nameInput.addEventListener("input", () => {
   const value = nameInput.value.trim();
-  nameOutput.textContent = value === '' ? 'незнайомець' : value;
+  nameOutput.textContent = value === "" ? "незнайомець" : value;
 });
 
-const validationInput = document.querySelector('#validation-input');
+const validationInput = document.querySelector("#validation-input");
 
-validationInput.addEventListener('blur', () => {
+validationInput.addEventListener("blur", () => {
   const requiredLength = Number(validationInput.dataset.length);
   const actualLength = validationInput.value.trim().length;
 
   if (actualLength === requiredLength) {
-    validationInput.classList.add('valid');
-    validationInput.classList.remove('invalid');
+    validationInput.classList.add("valid");
+    validationInput.classList.remove("invalid");
   } else {
-    validationInput.classList.add('invalid');
-    validationInput.classList.remove('valid');
+    validationInput.classList.add("invalid");
+    validationInput.classList.remove("valid");
+  }
 });
-
-
-
-
-
-
-
-
-
 
 const fontSizeControl = document.getElementById("font-size-control");
 const text = document.getElementById("text");
-
 
 text.style.fontSize = fontSizeControl.value + "px";
 
