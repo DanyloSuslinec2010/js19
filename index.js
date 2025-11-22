@@ -36,7 +36,6 @@ validationInput.addEventListener('blur', () => {
   } else {
     validationInput.classList.add('invalid');
     validationInput.classList.remove('valid');
-  }
 });
 
 
